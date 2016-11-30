@@ -1,0 +1,3 @@
+$ gcc -o app1 app1.m -I/GNUstep/System/Library/Headers -fconstant-string-class=NSConstantString -L/GNUstep/System/Library/Libraries -lobjc -lgnustep-base
+
+$ gcc -o app2 Main.m Calculate.m -I/GNUstep/System/Library/Headers -fconstant-string-class=NSConstantString -L/GNUstep/System/Library/Libraries -lobjc -lgnustep-base
