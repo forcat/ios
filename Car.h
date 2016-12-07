@@ -1,15 +1,22 @@
 #import <Cocoa/Cocoa.h>
-#import "Tire.h"
-#import "Engine.h"
 
-@interface Car : NSObject
+@class Tire;
+@class Engine;
+
+@interface Car : NSObject <NSCopying>
 {
+	NSMutableArray *tires;
+	NSString *name;
 	Engine *engine;
-	Tire *tires[4];
 }
-- (Engine *) engine;
-- (void) setEngine: (Engine *) newEngine;
-- (Tire *) tireAtIndex: (int) index;
+
+// 属性
+@property (readwrite, copy) NSString *name;
+@property (readwrite, retain) Engine *engine;
+
+// 方法
 - (void) setTire: (Tire *) tire atIndex: (int) index;
+- (Tire *) tireAtIndex: (int) index;
 - (void) print;
+
 @end // Car

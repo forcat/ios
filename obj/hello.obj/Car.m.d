@@ -304,8 +304,7 @@ obj/hello.obj/Car.m.o: Car.m Car.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSUserDefaultsController.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSWindowController.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/PSOperators.h \
- d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h Tire.h \
- Engine.h
+ d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h
 
 Car.h:
 
@@ -920,7 +919,3 @@ d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSWindowController.h:
 d:/GNUstep/GNUstep/System/Library/Headers/AppKit/PSOperators.h:
 
 d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h:
-
-Tire.h:
-
-Engine.h:

@@ -144,8 +144,8 @@ obj/hello.obj/main.m.o: main.m \
  d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLDTD.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLDTDNode.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLElement.h \
- d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLParser.h Car.h \
- d:/GNUstep/GNUstep/System/Library/Headers/Cocoa/Cocoa.h \
+ d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLParser.h \
+ FindFile.h Car.h d:/GNUstep/GNUstep/System/Library/Headers/Cocoa/Cocoa.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/AppKit.h \
  d:/GNUstep/GNUstep/System/Library/Headers/GNUstepGUI/GSVersion.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSGraphics.h \
@@ -304,8 +304,8 @@ obj/hello.obj/main.m.o: main.m \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSUserDefaultsController.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSWindowController.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/PSOperators.h \
- d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h Tire.h \
- Engine.h Slant6.h
+ d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h Slant6.h \
+ Engine.h Tire.h
 
 d:/GNUstep/GNUstep/System/Library/Headers/Foundation/Foundation.h:
 
@@ -598,6 +598,8 @@ d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLDTDNode.h:
 d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLElement.h:
 
 d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLParser.h:
+
+FindFile.h:
 
 Car.h:
 
@@ -921,8 +923,8 @@ d:/GNUstep/GNUstep/System/Library/Headers/AppKit/PSOperators.h:
 
 d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h:
 
-Tire.h:
+Slant6.h:
 
 Engine.h:
 
-Slant6.h:
+Tire.h:

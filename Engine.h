@@ -1,4 +1,4 @@
 #import <Cocoa/Cocoa.h>
 
-@interface Engine : NSObject
+@interface Engine : NSObject <NSCopying>
 @end // Engine

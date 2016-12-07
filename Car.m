@@ -1,32 +1,35 @@
 #import "Car.h"
 
 @implementation Car
+{
+	NSMutableArray *tires;
+	NSString *name;
+	Engine *engine;
+}
+
+@synthesize name;
+@synthesize engine;
+
 - (id) init
 {
-	if (self = [super init])
+	if ((self = [super init]))
 	{
-		engine = [Engine new];
+		self.name = @"Car";
+		tires = [[NSMutableArray alloc] init];
+
 		for (int i = 0; i < 4; i++)
 		{
-			tires[i] = [Tire new];
+			//tires[i] = [Tire new];
+			[tires addObject: [NSNull null]];
 		}
 	}
 	
 	return (self);
 } // init
 
-- (Engine *) engine
-{
-	return (engine);
-} // engine
-
-- (void) setEngine: (Engine *) newEngine
-{
-	engine = newEngine;
-} // setEngine
-
 - (Tire *) tireAtIndex: (int) index
 {
+	/*
 	if (index < 0 || index > 3)
 	{
 		NSLog(@"bad index (%d) in tireAtIndex:", index);
@@ -34,16 +37,27 @@
 	}
 	
 	return (tires[index]);
+	
+	*/
+	Tire *tire = [tires objectAtIndex: index];
+	
+	return tire;
 } // tireAtIndex
 
 - (void) setTire : (Tire *) tire atIndex: (int) index
 {
+	/*
 	if (index < 0 || index > 3)
 	{
 		NSLog(@"bad index (%d) in  setTire:atIndex:", index);
 		exit(1);
 	}
 	tires[index] = tire;
+	*/
+	
+	[tires replaceObjectAtIndex: index
+	withObject: tire];
+	
 } // setTire
 
 - (void) print
@@ -54,5 +68,26 @@
 		NSLog(@"%@", tires[i]);
 	}
 } // print
+
+- (id) copyWithZone: (NSZone *) zone
+{
+	Car *carCopy;
+	carCopy = [[[self class] allocWithZone: zone] init];
+	carCopy.name = self.name;
+	
+	Engine *engineCopy;
+	engineCopy = [[engine copy] autorelease];
+	carCopy.engine = engineCopy;
+	
+	for (int i = 0; i < 4; i++)
+	{
+		Tire *tireCopy;
+		tireCopy = [[self tireAtIndex: i] copy];
+		[tireCopy autorelease];
+		[carCopy setTire: tireCopy atIndex: i];
+	}
+	
+	return carCopy;
+}
 
 @end // car

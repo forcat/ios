@@ -1,4 +1,4 @@
-obj/HelloWorld.obj/main.m.o: main.m \
+obj/hello.obj/FindFile.m.o: FindFile.m FindFile.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Foundation/Foundation.h \
  d:/GNUstep/GNUstep/System/Library/Headers/GNUstepBase/GSVersionMacros.h \
  d:/GNUstep/GNUstep/System/Library/Headers/GNUstepBase/GSConfig.h \
@@ -145,6 +145,8 @@ obj/HelloWorld.obj/main.m.o: main.m \
  d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLDTDNode.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLElement.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLParser.h
+
+FindFile.h:
 
 d:/GNUstep/GNUstep/System/Library/Headers/Foundation/Foundation.h:
 

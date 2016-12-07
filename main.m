@@ -3,6 +3,7 @@
 //****www.sweettutos.com*******
 //
 #import <Foundation/Foundation.h>
+#import "FindFile.h"
 #import "Car.h"
 #import "Slant6.h"
 #import "Tire.h"
@@ -13,31 +14,13 @@ int main (int argc, const char * argv[])
 
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	
-	NSFileManager *manager = [NSFileManager defaultManager];
-	NSString *home = [@"~" stringByExpandingTildeInPath];
-	NSMutableArray *files;
-	files = [NSMutableArray arrayWithCapacity: 42];
-	
-	for (NSString *fileName in [manager enumeratorAtPath: home])
-	{
-		if ([[fileName pathExtension] isEqualTo: @"jpg"])
-		{
-			[files addObject: fileName];
-		}
-	}
-	
-	for (NSString *fileName in files)
-	{
-		NSLog(fileName);
-	}
-	
-	//NSLog(home);
-
-	/*
 	NSLog(@"Hello,This is my first IOS EXE !!!");
+
+	FindFile();
 	
-	Car *car = [Car new];
-	Slant6 *engine = [Slant6 new];
+	/*
+	Car *car = [[Car alloc] init];
+	Slant6 *engine = [[Slant6 alloc] init];
 	[car setEngine: engine];
 	
 	for (int i = 0; i < 4; i++)
