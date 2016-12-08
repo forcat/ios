@@ -55,17 +55,26 @@
 	tires[index] = tire;
 	*/
 	
-	[tires replaceObjectAtIndex: index
-	withObject: tire];
+	[tires replaceObjectAtIndex: index withObject: tire];
 	
 } // setTire
 
 - (void) print
 {
+	NSLog(@"%@", self.name);
+	
 	NSLog(@"%@", engine);
+	
+	/*
 	for (int i = 0; i < 4; i++)
 	{
-		NSLog(@"%@", tires[i]);
+		NSLog(@"%@", [self tireAtIndex: i]);
+	}
+	*/
+	
+	for (Tire *tire in tires)
+	{
+		NSLog(@"%@", tire);
 	}
 } // print
 
@@ -89,5 +98,13 @@
 	
 	return carCopy;
 }
+
+- (void) dealloc
+{
+	self.name = nil;
+	[tires release];
+	[engine release];
+	[super dealloc];
+} // dealloc
 
 @end // car

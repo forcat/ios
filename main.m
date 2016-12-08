@@ -4,34 +4,29 @@
 //
 #import <Foundation/Foundation.h>
 #import "FindFile.h"
-#import "Car.h"
-#import "Slant6.h"
-#import "Tire.h"
-
+#import "MyCar.h"
+#import "Worker.h"
 
 int main (int argc, const char * argv[]) 
 {
 
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-	
-	NSLog(@"Hello,This is my first IOS EXE !!!");
+	//@autoreleasepool
+	{	
+		NSLog(@"Hello,This is my first IOS EXE !!!");
 
-	FindFile();
-	
-	/*
-	Car *car = [[Car alloc] init];
-	Slant6 *engine = [[Slant6 alloc] init];
-	[car setEngine: engine];
-	
-	for (int i = 0; i < 4; i++)
-	{
-		Tire *tire = [Tire new];
-		[car setTire: tire atIndex: i];
+		// GlobalFindFile();
+		// [MyCar ShowMyCar];
+		FindFileDelegate *delegate = [[FindFileDelegate alloc] init];
+		Worker *worker = [[Worker alloc] init];
+		
+		// [worker setDelegate: delegate];
+		worker.delegate = delegate;
+		
+		[worker DoFindFileWork];
+		
+		NSLog(@"To be continue, Bye bye !!!");
 	}
-	
-	[car print];
-	*/
-
     [pool release];
     return 0;
 }

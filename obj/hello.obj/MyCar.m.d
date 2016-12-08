@@ -1,4 +1,5 @@
-obj/hello.obj/main.m.o: main.m \
+obj/hello.obj/MyCar.m.o: MyCar.m MyCar.h \
+ d:/GNUstep/GNUstep/System/Library/Headers/Cocoa/Cocoa.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Foundation/Foundation.h \
  d:/GNUstep/GNUstep/System/Library/Headers/GNUstepBase/GSVersionMacros.h \
  d:/GNUstep/GNUstep/System/Library/Headers/GNUstepBase/GSConfig.h \
@@ -145,8 +146,6 @@ obj/hello.obj/main.m.o: main.m \
  d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLDTDNode.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLElement.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLParser.h \
- FindFile.h MyCar.h \
- d:/GNUstep/GNUstep/System/Library/Headers/Cocoa/Cocoa.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/AppKit.h \
  d:/GNUstep/GNUstep/System/Library/Headers/GNUstepGUI/GSVersion.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSGraphics.h \
@@ -305,7 +304,12 @@ obj/hello.obj/main.m.o: main.m \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSUserDefaultsController.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSWindowController.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/PSOperators.h \
- d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h Worker.h
+ d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h Car.h \
+ Slant6.h Engine.h Tire.h
+
+MyCar.h:
+
+d:/GNUstep/GNUstep/System/Library/Headers/Cocoa/Cocoa.h:
 
 d:/GNUstep/GNUstep/System/Library/Headers/Foundation/Foundation.h:
 
@@ -598,12 +602,6 @@ d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLDTDNode.h:
 d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLElement.h:
 
 d:/GNUstep/GNUstep/System/Library/Headers/Foundation/NSXMLParser.h:
-
-FindFile.h:
-
-MyCar.h:
-
-d:/GNUstep/GNUstep/System/Library/Headers/Cocoa/Cocoa.h:
 
 d:/GNUstep/GNUstep/System/Library/Headers/AppKit/AppKit.h:
 
@@ -923,4 +921,10 @@ d:/GNUstep/GNUstep/System/Library/Headers/AppKit/PSOperators.h:
 
 d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h:
 
-Worker.h:
+Car.h:
+
+Slant6.h:
+
+Engine.h:
+
+Tire.h:

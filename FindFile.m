@@ -1,6 +1,6 @@
 #import "FindFile.h"
 
-void FindFile()
+void GlobalFindFile()
 {
 	/*
 	NSFileManager *manager = [NSFileManager defaultManager];
@@ -22,5 +22,15 @@ void FindFile()
 	}
 	*/
 	NSLog(@"Find File.");
-	printf("This is C function.\n");
+	// sscanf();
+	printf("This is C function: \"printf\".\n");
 }
+
+@implementation FindFileDelegate
+
+- (void) FindFile
+{
+	GlobalFindFile();
+}
+
+@end

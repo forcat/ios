@@ -11,7 +11,8 @@
 
 - (NSString *) description
 {
-	return (@"I am a tire, I last a while.");
+	return [NSString stringWithFormat: @"Tire: %.1f TreadDepth: %.1f", 
+	pressure, treadDepth];
 } // description
 
 - (id) initWithPressure: (float) p treadDepth: (float) t
