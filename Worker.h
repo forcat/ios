@@ -6,7 +6,7 @@
 	id <FindFileProtocol> delegate;
 }
 
-@property id <FindFileProtocol> delegate;
+@property (retain) id <FindFileProtocol> delegate;
 
 - (void) DoFindFileWork;
 

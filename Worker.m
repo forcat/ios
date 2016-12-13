@@ -9,6 +9,9 @@
 
 - (void) DoFindFileWork
 {
+	// 为什么使用 self.delegate 会导致 delegate 引用计数增加？？？
+	NSLog(@"delegate retain count:%d", delegate.retainCount);
+	
 	NSLog(@"call FindFile");
 	[delegate FindFile];
 

@@ -10,6 +10,9 @@ hello_OBJC_FILES = main.m Car.m Engine.m Tire.m Slant6.m FindFile.m Worker.m MyC
 # Header files of your project
 #SweetTutos_HEADER_FILES = xxx.h //here goes all header files (.h). For the moment, on n'en a pas.
 # Define compilation flags
-ADDITIONAL_CPPFLAGS = -Wall -Wno-import -std=c99
+ADDITIONAL_CPPFLAGS = -Wall -std=gnu99
+#ADDITIONAL_OBJCFLAGS = -fobjc-abi-version=4
+
+-include GNUmakefile.preamble
 # Include rules for creating a command line tool for Objective-C
 include $(GNUSTEP_MAKEFILES)/tool.make
