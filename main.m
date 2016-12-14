@@ -6,8 +6,7 @@
 #import "FindFile.h"
 #import "MyCar.h"
 #import "Worker.h"
-
-typedef int (^IntBlock)();
+#import "MyWorkThread.h"
 
 int main (int argc, const char * argv[]) 
 {
@@ -19,22 +18,31 @@ int main (int argc, const char * argv[])
 
 		// GlobalFindFile();
 		// [MyCar ShowMyCar];
-/* 		FindFileDelegate *delegate = [[FindFileDelegate alloc] init];		
+		/* 
+		FindFileDelegate *delegate = [[FindFileDelegate alloc] init];		
 		Worker *worker = [[Worker alloc] init];
-
 		// [worker setDelegate: delegate];
 		worker.delegate = delegate;
 		[worker DoFindFileWork]; */
-		void (^myBlock)() = ^(){ NSLog(@"This is my blocks.");};
 		
-		for (int i = 0; i < 4; i++)
+		// gcc 不支持代码块语法，必须加入libobjc2，版本1.7以上才支持
+		// void (^myBlock)() = ^(){ NSLog(@"This is my blocks.");};
+
+		/* 同步对象
+		NSObject *theObj = [[NSObject alloc] init];
+		
+		@synchronized(theObj)
 		{
-			NSLog(@"%d", i);
+			NSLog(@"I am in synchronized code.");
 		}
+		*/
 		
+		// oc 中的异常处理
 		@try
 		{
-			NSLog(@"To be continue, Bye bye !!!");
+			MyWorkThread *workThread = [[MyWorkThread alloc] init];
+			[workThread performSelectorInBackground: @selector(DoWork) withObject: nil];
+			[workThread performSelectorInBackground: @selector(DoWorkWithParam:) withObject: [NSNumber numberWithInt : 100]];
 		}
 		@catch (NSException * e)
 		{
@@ -45,6 +53,7 @@ int main (int argc, const char * argv[])
 			NSLog(@"finally");
 		}
 		
+		NSLog(@"To be continue, Bye bye !!!");
 	// }
     [pool release];
     return 0;

@@ -1,4 +1,4 @@
-obj/hello.obj/main.m.o: main.m \
+obj/hello.obj/MyWorkThread.m.o: MyWorkThread.m MyWorkThread.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Cocoa/Cocoa.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Foundation/Foundation.h \
  d:/GNUstep/GNUstep/System/Library/Headers/GNUstepBase/GSVersionMacros.h \
@@ -304,8 +304,9 @@ obj/hello.obj/main.m.o: main.m \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSUserDefaultsController.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSWindowController.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/PSOperators.h \
- d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h \
- FindFile.h MyCar.h Worker.h MyWorkThread.h
+ d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h
+
+MyWorkThread.h:
 
 d:/GNUstep/GNUstep/System/Library/Headers/Cocoa/Cocoa.h:
 
@@ -918,11 +919,3 @@ d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSWindowController.h:
 d:/GNUstep/GNUstep/System/Library/Headers/AppKit/PSOperators.h:
 
 d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h:
-
-FindFile.h:
-
-MyCar.h:
-
-Worker.h:
-
-MyWorkThread.h:
