@@ -1,4 +1,4 @@
-obj/hello.obj/main.m.o: main.m \
+obj/hello.obj/Bull.m.o: Bull.m Bull.h Cattle.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Cocoa/Cocoa.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Foundation/Foundation.h \
  d:/GNUstep/GNUstep/System/Library/Headers/GNUstepBase/GSVersionMacros.h \
@@ -304,8 +304,11 @@ obj/hello.obj/main.m.o: main.m \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSUserDefaultsController.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSWindowController.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/PSOperators.h \
- d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h \
- FindFile.h FindFileWorker.h MyWorkThread.h Concurrency.h DoProxy.h
+ d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h
+
+Bull.h:
+
+Cattle.h:
 
 d:/GNUstep/GNUstep/System/Library/Headers/Cocoa/Cocoa.h:
 
@@ -918,13 +921,3 @@ d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSWindowController.h:
 d:/GNUstep/GNUstep/System/Library/Headers/AppKit/PSOperators.h:
 
 d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h:
-
-FindFile.h:
-
-FindFileWorker.h:
-
-MyWorkThread.h:
-
-Concurrency.h:
-
-DoProxy.h:

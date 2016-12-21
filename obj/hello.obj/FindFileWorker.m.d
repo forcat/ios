@@ -1,4 +1,4 @@
-obj/hello.obj/main.m.o: main.m \
+obj/hello.obj/FindFileWorker.m.o: FindFileWorker.m FindFileWorker.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Cocoa/Cocoa.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Foundation/Foundation.h \
  d:/GNUstep/GNUstep/System/Library/Headers/GNUstepBase/GSVersionMacros.h \
@@ -305,7 +305,9 @@ obj/hello.obj/main.m.o: main.m \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSWindowController.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/PSOperators.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h \
- FindFile.h FindFileWorker.h MyWorkThread.h Concurrency.h DoProxy.h
+ FindFile.h
+
+FindFileWorker.h:
 
 d:/GNUstep/GNUstep/System/Library/Headers/Cocoa/Cocoa.h:
 
@@ -920,11 +922,3 @@ d:/GNUstep/GNUstep/System/Library/Headers/AppKit/PSOperators.h:
 d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h:
 
 FindFile.h:
-
-FindFileWorker.h:
-
-MyWorkThread.h:
-
-Concurrency.h:
-
-DoProxy.h:

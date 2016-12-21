@@ -11,6 +11,5 @@
 // 
 @property float treadDepth;
 
-- (id) initWithPressure: (float) pressure 
-		treadDepth: (float) treadDepth;
+- (id) initWithPressure: (float) p treadDepth: (float) t;
 @end // Tire

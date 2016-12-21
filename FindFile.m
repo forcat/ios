@@ -1,8 +1,17 @@
 #import "FindFile.h"
 
-void GlobalFindFile()
+@implementation FindFile
+
+- (void) FindFile
 {
-	/*
+	GlobalFindFile(@"jpg");
+}
+
+@end
+
+void GlobalFindFile(NSString *fileExtern)
+{
+	NSLog(@"Find file with extension: %@", fileExtern);	
 	NSFileManager *manager = [NSFileManager defaultManager];
 	NSString *home = [@"~" stringByExpandingTildeInPath];
 	NSMutableArray *files;
@@ -10,7 +19,7 @@ void GlobalFindFile()
 	
 	for (NSString *fileName in [manager enumeratorAtPath: home])
 	{
-		if ([[fileName pathExtension] isEqualTo: @"jpg"])
+		if ([[fileName pathExtension] isEqualTo: fileExtern])
 		{
 			[files addObject: fileName];
 		}
@@ -20,17 +29,4 @@ void GlobalFindFile()
 	{
 		NSLog(fileName);
 	}
-	*/
-	NSLog(@"Find File.");
-	// sscanf();
-	printf("This is C function: \"printf\".\n");
 }
-
-@implementation FindFileDelegate
-
-- (void) FindFile
-{
-	GlobalFindFile();
-}
-
-@end

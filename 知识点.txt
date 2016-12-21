@@ -1,0 +1,58 @@
+一，NSLog输出内容解释：
+
+NSLog(@"%@",[NSString stringWithFormat:@"[%ld:%lx]", (long) getpid(), (long) pthread_mach_thread_np(pthread_self())]);
+
+第一个是PID（线程ID） 第二个是通过thread ID 获取的mach port
+
+二，代码块
+
+gcc 不支持代码块语法，必须加入libobjc2（版本1.7以上）才支持
+
+// 不带输入输出参数
+void (^myBlock)() = ^(){ NSLog(@"This is my blocks.");};
+
+// 带输入输出参数。输出参数是由代码推断出来
+int (^myBlock2)(int number) = ^(int number) { return number * number;};
+
+三，线程同步
+
+1，创建同步对象
+
+	NSObject *theObj = [[NSObject alloc] init];
+
+2，使用同步对象
+		
+		@synchronized(theObj)
+		{
+			doWork...
+		}
+		
+四，关于属性
+1，@property
+当编译器碰到这个指令时，会自动生成getter和setter方法
+2，@synthesize
+>本指令通常和@property同时使用，如果使用了属性指令，例如 @property int myNumber;
+但是未使用@synthesize，那么在代码中，需要通过 _myNumber 或者 self.myNumber 方式引用实例变量，
+通过 self 的方式，是调用的 getter 方法。
+
+>如果使用了，则直接用 myNumber （或者 self.myNumber）来引用。
+
+>可通过 @synthesize myXYZ = _myNumber 来设置别名
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

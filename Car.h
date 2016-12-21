@@ -1,7 +1,8 @@
 #import <Cocoa/Cocoa.h>
-
+//#import "Tire.h"
 @class Tire;
 @class Engine;
+@class Slant6;
 
 @interface Car : NSObject <NSCopying>
 {
@@ -18,5 +19,6 @@
 - (void) setTire: (Tire *) tire atIndex: (int) index;
 - (Tire *) tireAtIndex: (int) index;
 - (void) print;
++ (void) ShowMyCar;
 
 @end // Car

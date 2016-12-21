@@ -18,3 +18,10 @@
 }
 
 @end
+
+void BackGroundWork()
+{
+	MyWorkThread *workThread = [[MyWorkThread alloc] init];
+	[workThread performSelectorInBackground: @selector(DoWork) withObject: nil];
+	[workThread performSelectorInBackground: @selector(DoWorkWithParam:) withObject: [NSNumber numberWithInt : 100]];
+}
