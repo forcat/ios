@@ -39,6 +39,24 @@ int (^myBlock2)(int number) = ^(int number) { return number * number;};
 
 >可通过 @synthesize myXYZ = _myNumber 来设置别名
 
+五，NSSelectorFromString
+
+六，NSStringFromSelector(_cmd);
+
+通过这个方式，可以获取被调用的当前方法的字符串名称
+
+
+七，函数指针
+
+typedef id	(*IMP)(id, SEL, ...);
+
+id：消息的接收对象
+SEL：执行消息的方法名
+...：传入方法的参数，有多少传多少
+
+八，实例变量作用域
+
+默认 protected
 
 
 

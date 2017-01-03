@@ -8,6 +8,7 @@
 #import "MyWorkThread.h"
 #import "Concurrency.h"
 #import "DoProxy.h"
+#import "JsonTool.h"
 
 int main (int argc, const char * argv[]) 
 {
@@ -23,7 +24,25 @@ int main (int argc, const char * argv[])
 		{
 			//TestFindFileDelegete();
 			//SerialQueue();
-			TestProxy();
+			//TestProxy();
+			JsonTool *jsonTool = [JsonTool alloc];
+			NSString *queryUrl = @"http://www.weather.com.cn/data/sk/101010100.html";
+			
+			[jsonTool performSelectorInBackground: @selector(UnPackageDataFromUrl) withObject: queryUrl];
+			//[jsonTool UnPackageDataFromUrl: queryUrl];
+			/*
+			NSData *jsonData = [jsonTool PackageData];
+			if (jsonData != nil)
+			{
+				NSString *json = [[NSString alloc] 
+				initWithData: jsonData
+				encoding: NSUTF8StringEncoding];
+		
+				NSLog(@"json data: %@", json);
+				
+				[jsonTool UnPackageData: jsonData];
+			}
+			*/
 		}
 		@catch (NSException *e)
 		{
@@ -31,7 +50,7 @@ int main (int argc, const char * argv[])
 		}
 		@finally
 		{
-			NSLog(@"Finally");
+			NSLog(@"try catch Finally");
 		}
 
 		NSLog(@"To be continue, Bye bye !!!");

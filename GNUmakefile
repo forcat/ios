@@ -6,7 +6,7 @@ include $(GNUSTEP_MAKEFILES)/common.make
 # make a simple program in Objective-C, call it SweetTutos
 TOOL_NAME = hello
 # The implementation Objective-C file which is going to be compiled
-hello_OBJC_FILES = main.m Car.m Engine.m Tire.m Slant6.m FindFile.m FindFileWorker.m MyWorkThread.m Concurrency.m Cattle.m Bull.m DoProxy.m
+hello_OBJC_FILES = main.m Car.m Engine.m Tire.m Slant6.m FindFile.m FindFileWorker.m MyWorkThread.m Concurrency.m Cattle.m Bull.m DoProxy.m JsonTool.m
 # Header files of your project
 #SweetTutos_HEADER_FILES = xxx.h //here goes all header files (.h). For the moment, on n'en a pas.
 # Define compilation flags
