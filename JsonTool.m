@@ -1,23 +1,6 @@
 #import "JsonTool.h"
 
 @implementation JsonTool
-{
-	NSString *serverUrl;
-}
-
-@synthesize serverUrl;
-
-
--(id) initWithServerUrl: (NSString*) serverUrl
-{
-	if((self = [super init]))
-	{
-		self.serverUrl = serverUrl;
-	}
-	
-	return self;
-}
-
 
 -(void) DoGetMethod: (NSString*) url
 {
@@ -88,19 +71,19 @@
 
 -(void) UnPackageDataFromUrl: (NSString *) queryUrl
 {
-	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	NSLog(queryUrl);
-	NSError *error;
+	NSError *error = nil;
 
 	NSURLRequest *request = [NSURLRequest
 	requestWithURL: [NSURL URLWithString: queryUrl]];
+	NSLog(@"Ready to connect %@", [request URL]);
 	
-	NSLog(@"a");
+	NSURLResponse *urlResponse = nil;
 	
 	NSData *response = [NSURLConnection
 	sendSynchronousRequest: request
-	returningResponse: nil
-	error: nil];
+	returningResponse: &urlResponse
+	error: &error];
 	
 	NSLog(@"b");
 	
@@ -122,8 +105,30 @@
 		value = [weather objectForKey: key];
 		NSLog(@"The %d item: %@-%@", i, key, value);
 	}
-	
-	[pool release];
 }
 
 @end
+
+void TestGetJsonData()
+{
+	JsonTool *jsonTool = [[JsonTool alloc] init];
+	
+	// 打包，解包json格式数据
+	NSData *jsonData = [jsonTool PackageData];
+	if (jsonData != nil)
+	{
+		NSString *json = [[NSString alloc] 
+		initWithData: jsonData
+		encoding: NSUTF8StringEncoding];
+	
+		NSLog(@"json data: %@", json);
+			
+		[jsonTool UnPackageData: jsonData];
+	}
+	
+	// 从URL获取json格式数据
+	/*
+	NSString *queryUrl = @"http://www.weather.com.cn/data/sk/101010100.html";
+	[jsonTool UnPackageDataFromUrl: queryUrl];
+	*/
+}

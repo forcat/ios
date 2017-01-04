@@ -25,24 +25,7 @@ int main (int argc, const char * argv[])
 			//TestFindFileDelegete();
 			//SerialQueue();
 			//TestProxy();
-			JsonTool *jsonTool = [JsonTool alloc];
-			NSString *queryUrl = @"http://www.weather.com.cn/data/sk/101010100.html";
-			
-			[jsonTool performSelectorInBackground: @selector(UnPackageDataFromUrl) withObject: queryUrl];
-			//[jsonTool UnPackageDataFromUrl: queryUrl];
-			/*
-			NSData *jsonData = [jsonTool PackageData];
-			if (jsonData != nil)
-			{
-				NSString *json = [[NSString alloc] 
-				initWithData: jsonData
-				encoding: NSUTF8StringEncoding];
-		
-				NSLog(@"json data: %@", json);
-				
-				[jsonTool UnPackageData: jsonData];
-			}
-			*/
+			TestGetJsonData();
 		}
 		@catch (NSException *e)
 		{
@@ -53,7 +36,8 @@ int main (int argc, const char * argv[])
 			NSLog(@"try catch Finally");
 		}
 
-		NSLog(@"To be continue, Bye bye !!!");
+		NSLog(@"Press any key to continue...");
+		getchar();
 	// }
     [pool release];
     return 0;
