@@ -13,12 +13,17 @@
 
 // 属性
 @property (readwrite, copy) NSString *name;
-@property (readwrite, retain) Engine *engine;
+//@property (readwrite, retain) Engine *engine;
 
 // 方法
+-(void) setEngine: (Engine*) newEngine;
+-(Engine*) engine;
+
 - (void) setTire: (Tire *) tire atIndex: (int) index;
 - (Tire *) tireAtIndex: (int) index;
 - (void) print;
 + (void) ShowMyCar;
 
 @end // Car
+
+void TestRetainCount();

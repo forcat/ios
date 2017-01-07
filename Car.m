@@ -8,7 +8,7 @@
 }
 
 @synthesize name;
-@synthesize engine;
+//@synthesize engine;
 
 - (id) init
 {
@@ -26,6 +26,20 @@
 	
 	return (self);
 } // init
+
+- (void) setEngine: (Engine*) newEngine
+{
+	NSLog(@"in car engine: %d", [engine retainCount]);
+	[engine release];
+	NSLog(@"in car engine: %d", [engine retainCount]);
+	engine = [newEngine retain];
+	NSLog(@"in car engine: %d", [engine retainCount]);
+}
+
+- (Engine*) engine
+{
+	return engine;
+}
 
 - (Tire *) tireAtIndex: (int) index
 {
@@ -136,3 +150,16 @@
 }
 
 @end // car
+
+void TestRetainCount()
+{
+	Engine *engine1 = [[Engine alloc] init];
+	NSLog(@"%d", [engine1 retainCount]);
+	Car *car1 = [[Car alloc] init];
+	Car *car2 = [[Car alloc] init];
+	[car1 setEngine: engine1];
+	NSLog(@"%d", [engine1 retainCount]);
+	[engine1 release];
+	NSLog(@"%d", [engine1 retainCount]);
+	[car2 setEngine: [car1 engine]];
+}

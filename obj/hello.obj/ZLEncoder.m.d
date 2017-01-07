@@ -1,4 +1,4 @@
-obj/hello.obj/main.m.o: main.m \
+obj/hello.obj/ZLEncoder.m.o: ZLEncoder.m ZLEncoder.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Cocoa/Cocoa.h \
  d:/GNUstep/GNUstep/System/Library/Headers/Foundation/Foundation.h \
  d:/GNUstep/GNUstep/System/Library/Headers/GNUstepBase/GSVersionMacros.h \
@@ -304,9 +304,9 @@ obj/hello.obj/main.m.o: main.m \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSUserDefaultsController.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSWindowController.h \
  d:/GNUstep/GNUstep/System/Library/Headers/AppKit/PSOperators.h \
- d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h \
- FindFile.h FindFileWorker.h MyWorkThread.h Concurrency.h DoProxy.h \
- JsonTool.h Car.h ZLEncoder.h
+ d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h
+
+ZLEncoder.h:
 
 d:/GNUstep/GNUstep/System/Library/Headers/Cocoa/Cocoa.h:
 
@@ -919,19 +919,3 @@ d:/GNUstep/GNUstep/System/Library/Headers/AppKit/NSWindowController.h:
 d:/GNUstep/GNUstep/System/Library/Headers/AppKit/PSOperators.h:
 
 d:/GNUstep/GNUstep/System/Library/Headers/AppKit/DPSOperators.h:
-
-FindFile.h:
-
-FindFileWorker.h:
-
-MyWorkThread.h:
-
-Concurrency.h:
-
-DoProxy.h:
-
-JsonTool.h:
-
-Car.h:
-
-ZLEncoder.h:

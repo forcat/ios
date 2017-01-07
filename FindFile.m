@@ -30,3 +30,16 @@ void GlobalFindFile(NSString *fileExtern)
 		NSLog(fileName);
 	}
 }
+
+void TestFileIO()
+{
+	NSString *file = @"d:/test.xml";
+	// 写文件
+	NSArray *phraseWrite;
+	phraseWrite = [NSArray arrayWithObjects: @"I", @"am", @"a", @"programmer", nil];
+	[phraseWrite writeToFile: file atomically: YES];
+	
+	// 读文件
+	NSArray *phraseRead = [NSArray arrayWithContentsOfFile: file];
+	NSLog(@"%@", phraseRead);
+}

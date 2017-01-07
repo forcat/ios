@@ -23,3 +23,5 @@
 
 
 void GlobalFindFile(NSString *fileExtern);
+
+void TestFileIO();

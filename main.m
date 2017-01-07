@@ -9,6 +9,8 @@
 #import "Concurrency.h"
 #import "DoProxy.h"
 #import "JsonTool.h"
+#import "Car.h"
+#import "ZLEncoder.h"
 
 int main (int argc, const char * argv[]) 
 {
@@ -17,6 +19,8 @@ int main (int argc, const char * argv[])
 	//@autoreleasepool
 	// {	
 		NSLog(@"Hello,This is my first IOS EXE !!!");
+		NSDate *date = [NSDate date];
+		NSLog(@"Today is : %@", date);
 		printf("This is C style print.\n");
 		
 		// oc 中的异常处理
@@ -25,7 +29,10 @@ int main (int argc, const char * argv[])
 			//TestFindFileDelegete();
 			//SerialQueue();
 			//TestProxy();
-			TestGetJsonData();
+			//TestGetJsonData();
+			//TestRetainCount();
+			// TestFileIO();
+			TestEncoder();
 		}
 		@catch (NSException *e)
 		{
